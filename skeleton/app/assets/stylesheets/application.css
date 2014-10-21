@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+html, body, ul, li, div, a {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+body{
+  background-image: url("http://i.imgur.com/ZIbuNJE.gif") ;
+  font-family: sans-serif;
+  margin: 0 auto;
+  width: 480px;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+
+  margin: 0 auto;
+  background: linear-gradient( yellow, orange);
+  transition: all 2s;
+}
+h1:hover {
+  transform: skew(30deg, -30deg);
+}
+h1:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h2 {
+  background: linear-gradient(-45deg, red, white, blue);
+  text-align: center;
+  border-radius: 50%;
+  transition: all 5s;
+
+
+}
+
+h2:hover {
+  transform: rotate(360deg);
+}
+
+
+
+div#content {
+  border-radius: 5px;
+  background: linear-gradient(45deg, pink, green, red, blue, yellow, orange, purple);
+  display: block;
+
+  float: left;
+}
+
+li {
+  transition: all 0.5s;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+div li:hover > a {
+
+  background: yellow;
+  color: black;
+}
+div li:hover {
+  transform: translate(100px, 100px) rotate(360deg);
+
+
+}
+
+.index {
+
+  background: linear-gradient(white, black);
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.index:hover{
+   background: linear-gradient(black, white);
+   color: white;
+   box-shadow: 0px -5px 5px 1px orange;
+}
+
+button:not(.refresh) {
+  float: right;
+}
